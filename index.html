@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aafina Technologies | Technology, Intellectual Property &amp; Innovation</title>
-<meta name="description" content="Aafina Technologies &amp; Consulting Services Pvt. Ltd. is a Bengaluru-based technology and innovation company behind a growing portfolio of intellectual property, technology platforms and innovation ventures, including Skilligen™ HDI and FutureYou.">
+<title>Aafina Technologies &amp; Consulting | Technology, IP &amp; Post-AI Business Consulting</title>
+<meta name="description" content="Aafina Technologies &amp; Consulting Services Pvt. Ltd. (Bengaluru, India) works in two verticals: Technologies — its own IP and platforms plus global third-party solution partnerships and distribution rights — and Consulting — business model re-engineering, direct and affiliate marketing models and distribution models for the post-AI economy.">
 <link rel="canonical" href="https://www.aafinatech.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Aafina Technologies | Ideas to Impact. Technology with Purpose.">
@@ -96,6 +96,24 @@
   .tier b{font-weight:500;font-size:16.5px;letter-spacing:.02em}
   .tier.top{border-color:var(--orange);background:rgba(232,121,43,.10)}
   .link{height:22px;width:1px;background:rgba(255,255,255,.3);margin-left:28px}
+  .fork{display:grid;grid-template-columns:1fr 1fr;height:26px}
+  .fork span{border-left:1px solid rgba(255,255,255,.3);margin-left:28px}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .tier em{display:block;font-style:normal;font-size:13px;color:#C9D5E8;margin-top:6px;line-height:1.45}
+  /* Verticals */
+  .verts{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+  .vert{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+  .vert-head{background:var(--navy);color:#fff;padding:28px 30px}
+  .vert-head small{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#9DB4D6}
+  .vert-head h3{font-family:var(--serif);font-weight:400;font-size:30px;margin-top:6px}
+  .vert-head p{color:#C9D5E8;font-size:15px;margin-top:6px}
+  .vert ul{list-style:none;padding:8px 30px 26px}
+  .vert li{padding:18px 0;border-bottom:1px solid var(--line)}
+  .vert li:last-child{border-bottom:none}
+  .vert li b{display:block;color:var(--navy);font-weight:600;font-size:16px}
+  .vert li span{display:block;color:var(--muted);font-size:15px;margin-top:4px}
+  .vert .vcta{margin:0 30px 28px;align-self:flex-start;text-decoration:none;font-size:14.5px;font-weight:500;color:var(--navy);border-bottom:1px solid var(--orange);padding-bottom:2px}
+  .vert .vcta:hover{color:var(--orange)}
 
   /* Credentials strip */
   .creds{background:#fff;border-bottom:1px solid var(--line)}
@@ -214,6 +232,8 @@
     .ip-list li{grid-template-columns:1fr;gap:4px}
     .enq{grid-template-columns:1fr}
     .leaders{grid-template-columns:1fr}
+    .verts,.split{grid-template-columns:1fr}
+    .fork{display:none}
     .creds-row{grid-template-columns:1fr 1fr}
     .creds-row div{border-left:none;border-right:none!important;border-bottom:1px solid var(--line);padding:18px 10px}
     .creds-row div:last-child{grid-column:1/-1;border-bottom:none}
@@ -245,8 +265,9 @@
       <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
       <ul id="menu">
         <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Our Portfolio</a></li>
-        <li><a href="#ip">Intellectual Property</a></li>
+        <li><a href="#verticals">What We Do</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#ip">IP</a></li>
         <li><a href="#leadership">Leadership</a></li>
         <li><a href="#insights">Insights</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -261,21 +282,22 @@
 <div class="hero" id="top">
   <div class="wrap">
     <div>
-      <div class="eyebrow">Technology, Intellectual Property &amp; Innovation</div>
+      <div class="eyebrow">Technologies &amp; Consulting</div>
       <h1>Ideas to Impact.<br>Technology with Purpose.</h1>
-      <p class="lead">The company behind a growing portfolio of intellectual property, technology platforms and innovation ventures for a more capable human future.</p>
+      <p class="lead">We build and distribute technology, and we help businesses re-engineer their models for the post-AI economy: from intellectual property and platforms to cash-flow-ready distribution.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="#portfolio">Explore the Portfolio</a>
+        <a class="btn btn-primary" href="#verticals">What We Do</a>
         <a class="btn btn-ghost" href="#contact">Partner With Us</a>
       </div>
       <p class="entity"><strong>Aafina Technologies &amp; Consulting Services Pvt. Ltd.</strong><br>Bengaluru, India &nbsp;|&nbsp; Global Outlook</p>
     </div>
-    <div class="stack" aria-label="Aafina portfolio architecture">
-      <div class="tier top"><small>Technology &amp; IP House</small><b>AAFINA TECHNOLOGIES</b></div>
-      <div class="link"></div>
-      <div class="tier"><small>Human Decision Infrastructure</small><b>Skilligen™ HDI</b></div>
-      <div class="link"></div>
-      <div class="tier"><small>Human Readiness Platform</small><b>FutureYou</b></div>
+    <div class="stack" aria-label="Aafina business structure">
+      <div class="tier top"><small>Aafina Technologies &amp; Consulting Services</small><b>AAFINA</b></div>
+      <div class="fork" aria-hidden="true"><span></span><span></span></div>
+      <div class="split">
+        <div class="tier"><small>Vertical 01</small><b>Technologies</b><em>Own IP &amp; platforms · Global solution partnerships &amp; distribution rights</em></div>
+        <div class="tier"><small>Vertical 02</small><b>Consulting</b><em>Business models for the post-AI economy</em></div>
+      </div>
     </div>
   </div>
 </div>
@@ -299,8 +321,8 @@
     <h2>Turning ideas and intellectual property into scalable technology.</h2>
     <div class="grid-2">
       <div>
-        <p>Aafina Technologies &amp; Consulting Services Pvt. Ltd. is an innovation-driven technology company focused on transforming ideas, intellectual property and emerging technologies into scalable products, platforms and solutions.</p>
-        <p>The company works at the intersection of artificial intelligence, human capability, digital intelligence and innovation, with an emphasis on practical solutions for individuals, institutions and organisations.</p>
+        <p>Aafina Technologies &amp; Consulting Services Pvt. Ltd. is an innovation-driven technology and consulting company that turns ideas, intellectual property and emerging technologies into scalable products, platforms and business models.</p>
+        <p>We operate through two verticals. <strong>Aafina Technologies</strong> develops our own intellectual property and platforms, and partners with global technology providers for distribution. <strong>Aafina Consulting</strong> helps businesses re-engineer their business, marketing and distribution models for the post-AI economy.</p>
         <div class="chain" aria-label="Our philosophy">
           <span>Ideas</span><i>→</i><span>Intellectual Property</span><i>→</i><span>Technology</span><i>→</i><span>Application</span><i>→</i><span>Impact</span>
         </div>
@@ -313,10 +335,40 @@
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio" class="alt">
+<!-- VERTICALS -->
+<section id="verticals" class="alt">
   <div class="wrap">
-    <div class="kicker">Our Portfolio</div>
+    <div class="kicker">What We Do</div>
+    <h2>Two verticals. One purpose: ideas to impact.</h2>
+    <p class="intro">Aafina works across technology and consulting, so the businesses we work with get both the tools and the business model to grow in the post-AI economy.</p>
+    <div class="verts">
+      <article class="vert">
+        <div class="vert-head"><small>Vertical 01</small><h3>Aafina Technologies</h3><p>Our own IP and platforms, plus global solutions we partner with and distribute.</p></div>
+        <ul>
+          <li><b>Proprietary IP &amp; platforms</b><span>Technology we create and develop, including Skilligen™ HDI and FutureYou.</span></li>
+          <li><b>Global solution partnerships</b><span>Partnerships with international technology providers to bring proven third-party solutions to new markets.</span></li>
+          <li><b>Distribution rights</b><span>Distribution of partner technology solutions across India and international markets.</span></li>
+        </ul>
+        <a class="vcta" href="mailto:admin@skilligen.com?subject=Technology%20partnership%20%2F%20distribution%20enquiry">Discuss a technology partnership →</a>
+      </article>
+      <article class="vert">
+        <div class="vert-head"><small>Vertical 02</small><h3>Aafina Consulting</h3><p>Business model re-engineering for the post-AI economy.</p></div>
+        <ul>
+          <li><b>Wellness business development</b><span>Building and re-engineering wellness businesses for growth in an AI-shaped economy.</span></li>
+          <li><b>Business model re-engineering</b><span>Redesigning how a business creates value, reaches customers and earns, for the post-AI era.</span></li>
+          <li><b>Direct &amp; affiliate marketing models</b><span>Design and development of direct and affiliate marketing business models, from national to global scale.</span></li>
+          <li><b>Distribution models for cash flow</b><span>Designing, developing and deploying post-AI-era distribution models for any business that needs a dependable cash-flow model.</span></li>
+        </ul>
+        <a class="vcta" href="mailto:admin@skilligen.com?subject=Consulting%20enquiry">Start a consulting conversation →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="wrap">
+    <div class="kicker">Technology Portfolio</div>
     <h2>From intellectual architecture to technology platforms and real-world impact.</h2>
     <div class="grid-2" style="gap:24px">
       <article class="card">
@@ -338,7 +390,7 @@
 </section>
 
 <!-- APPROACH -->
-<section id="approach">
+<section id="approach" class="alt">
   <div class="wrap">
     <div class="kicker">Our Approach</div>
     <h2>From ideas to impact.</h2>
@@ -354,7 +406,7 @@
 </section>
 
 <!-- IP -->
-<section id="ip" class="alt">
+<section id="ip">
   <div class="wrap">
     <div class="kicker">Intellectual Property</div>
     <h2>Create. Protect. Develop. Apply. Scale.</h2>
@@ -449,7 +501,7 @@
     <p class="intro">Aafina is developing an ecosystem of technology, research, institutional and commercial partnerships across India and international markets.</p>
     <div class="chips">
       <span>Technology Partners</span><span>Research Partners</span><span>Education &amp; Institutional Partners</span>
-      <span>Enterprise Partners</span><span>Investment Partners</span><span>Global Distribution Partners</span>
+      <span>Enterprise Partners</span><span>Investment Partners</span><span>Global Distribution Partners</span><span>Solution Providers seeking Indian &amp; international distribution</span>
     </div>
   </div>
 </section>
@@ -464,7 +516,7 @@
         <p style="color:var(--muted)">Research, articles and perspectives from Aafina and its founders, across:</p>
         <div class="chips" style="margin-top:20px">
           <span>Artificial Intelligence</span><span>Human Decision Infrastructure</span><span>Human Readiness</span><span>Future of Work</span>
-          <span>Innovation</span><span>Intellectual Property</span><span>Research</span><span>Technology</span>
+          <span>Business Model Innovation</span><span>Distribution &amp; Direct Marketing</span><span>Intellectual Property</span><span>Technology</span>
         </div>
       </div>
       <div class="book">
@@ -481,7 +533,7 @@
   <div class="wrap">
     <div class="kicker" style="color:#9DB4D6">Contact</div>
     <h2>Let’s build what matters next.</h2>
-    <p class="intro">We welcome conversations with investors, technology companies, research institutions, universities, enterprises and strategic partners interested in building the next generation of human-centred technology.</p>
+    <p class="intro">We welcome conversations with businesses looking to re-engineer their model for the post-AI era, technology providers seeking distribution, investors, institutions and strategic partners.</p>
     <div class="contact-grid">
       <div class="addr">
         <strong>Aafina Technologies &amp; Consulting Services Pvt. Ltd.</strong>
@@ -489,9 +541,9 @@
         <a href="mailto:admin@skilligen.com">admin@skilligen.com</a>
       </div>
       <div class="enq">
-        <a href="mailto:admin@skilligen.com?subject=Partnership%20enquiry">Partner With Us<span>Strategic &amp; commercial partnerships</span></a>
+        <a href="mailto:admin@skilligen.com?subject=Consulting%20enquiry">Consulting Enquiries<span>Business, marketing &amp; distribution models</span></a>
+        <a href="mailto:admin@skilligen.com?subject=Technology%20partnership%20%2F%20distribution%20enquiry">Technology &amp; Distribution<span>Partnerships and distribution rights</span></a>
         <a href="mailto:admin@skilligen.com?subject=Investment%20enquiry">Investment Enquiries<span>For investors and funds</span></a>
-        <a href="mailto:admin@skilligen.com?subject=Technology%20%26%20IP%20enquiry">Technology &amp; IP<span>Licensing and technology</span></a>
         <a href="mailto:admin@skilligen.com?subject=Institutional%20collaboration">Institutional Collaboration<span>Universities &amp; institutions</span></a>
       </div>
     </div>
@@ -505,7 +557,7 @@
     <div class="foot">
       <div>
         <b>AAFINA TECHNOLOGIES &amp; CONSULTING SERVICES PVT. LTD.</b>
-        <p style="margin-top:8px">Ideas to Impact. Technology with Purpose.</p>
+        <p style="margin-top:8px">Ideas to Impact. Technology with Purpose.<br>Technologies · Consulting</p>
         <p style="margin-top:14px">Registered office: Esteem Mall, 127 &amp; 128, Bellary Road, Hebbal Kempapura, Bengaluru 560024, Karnataka, India<br><a href="mailto:admin@skilligen.com">admin@skilligen.com</a></p>
         <p style="margin-top:14px">CIN: U85500KA2024PTC194235<br>DPIIT-recognised startup · Certificate No. DIPP281417<br>MSME (Udyam) registered · UDYAM-KR-03-0469118</p>
       </div>
@@ -520,6 +572,7 @@
         <h4>Company</h4>
         <ul>
           <li><a href="#about">About</a></li>
+          <li><a href="#verticals">Technologies &amp; Consulting</a></li>
           <li><a href="#ip">Intellectual Property</a></li>
           <li><a href="#leadership">Leadership</a></li>
           <li><a href="#contact">Contact</a></li>
