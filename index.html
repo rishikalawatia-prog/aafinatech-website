@@ -224,6 +224,27 @@
   footer a:hover{color:#fff}
   .legal{margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px}
 
+
+  /* ===== Centred + justified text ===== */
+  section .kicker, section h2{text-align:center;margin-left:auto;margin-right:auto}
+  section .intro{margin-left:auto;margin-right:auto}
+  section p, .vert li span, .card p, .ip-list span{text-align:justify;text-align-last:center;hyphens:none;word-spacing:-.02em}
+  .step p, .pillar p, .facts span, .chips span, .book p, .note{text-align:center;text-align-last:auto}
+  .hero p.lead{text-align:justify;hyphens:none}
+  /* headings and labels inside blocks */
+  .card, .step, .pillar, .person, .vert-head, .vert li, .book, .panel, .addr{text-align:center}
+  .card a.go{justify-content:center;gap:8px}
+  .chain, .chips{justify-content:center}
+  .panel{border-left:none;padding-left:0;border-top:2px solid var(--orange);padding-top:20px}
+  .pillar{display:flex;flex-direction:column;align-items:center}
+  .belief{margin-left:auto;margin-right:auto;text-align:center}
+  .belief::before{margin-left:auto;margin-right:auto}
+  .ip-list li{grid-template-columns:1fr;gap:6px;text-align:center}
+  .vert .vcta{align-self:center}
+  .enq a{text-align:center}
+  .about-text{max-width:46em;margin:0 auto}
+  @media (max-width:600px){section p, .vert li span, .card p, .ip-list span, .hero p.lead{text-align:center;text-align-last:auto}}
+
   :focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 
   @media (max-width:900px){
