@@ -228,8 +228,9 @@
   /* ===== Centred + justified text ===== */
   section .kicker, section h2{text-align:center;margin-left:auto;margin-right:auto}
   section .intro{margin-left:auto;margin-right:auto}
-  section p, .vert li span, .card p, .ip-list span{text-align:justify;text-align-last:center;hyphens:none;word-spacing:-.02em}
-  .step p, .pillar p, .facts span, .chips span, .book p, .note{text-align:center;text-align-last:auto}
+  section p, .vert li span, .card p, .ip-list span, .step p, .pillar p, .book p, .note{text-align:justify;text-align-last:left;hyphens:none}
+  .facts span, .chips span{text-align:center}
+  .belief{text-align:justify!important;text-align-last:left}
   .hero p.lead{text-align:justify;hyphens:none}
   /* headings and labels inside blocks */
   .card, .step, .pillar, .person, .vert-head, .vert li, .book, .panel, .addr{text-align:center}
@@ -243,7 +244,7 @@
   .vert .vcta{align-self:center}
   .enq a{text-align:center}
   .about-text{max-width:46em;margin:0 auto}
-  @media (max-width:600px){section p, .vert li span, .card p, .ip-list span, .hero p.lead{text-align:center;text-align-last:auto}}
+
 
   :focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 
