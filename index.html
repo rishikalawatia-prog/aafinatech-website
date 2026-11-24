@@ -51,7 +51,7 @@
     --max:1120px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  html{scroll-padding-top:72px}
   body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
   a{color:inherit}
   img{max-width:100%}
@@ -376,6 +376,38 @@
   }
   .stat b{font-size:22px}
 
+
+  /* ===== Homepage polish ===== */
+  :root{--max:1200px}
+  /* hero */
+  .hero .wrap{grid-template-columns:1.2fr .8fr;gap:64px}
+  h1{max-width:12em}
+  .tier{padding:18px 20px}
+  .tier b{font-size:18px}
+  /* nav */
+  nav ul{align-items:center}
+  nav a.active{border-color:var(--orange)}
+  .nav-cta{background:var(--navy);color:#fff!important;padding:8px 16px!important;border-radius:999px;border:none!important}
+  .nav-cta:hover{background:var(--orange)}
+  /* why band */
+  section.band{background:var(--navy);color:#fff}
+  .band .kicker{color:#9DB4D6}
+  .band h2{color:#fff}
+  .band .pillar{border-top-color:var(--orange)}
+  .band .pillar h3{color:#fff}
+  .band .pillar p{color:#C9D5E8}
+  .band .belief{color:#fff}
+  /* creds strip sits flush under hero */
+  .creds b{font-size:22px}
+  @media (max-width:900px){
+    .hero .wrap{grid-template-columns:1fr}
+    .nav-cta{display:inline-block;margin-top:8px;text-align:center}
+    nav li a.nav-cta{border-bottom:none}
+    nav ul{align-items:stretch}
+    nav ul li{text-align:left}
+    .nav-cta{align-self:flex-start;margin-top:12px}
+  }
+
   :focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 
   @media (max-width:900px){
@@ -422,7 +454,7 @@
         <li><a href="#ip">IP</a></li>
         <li><a href="#leadership">Leadership</a></li>
         <li><a href="#insights">Insights</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -577,7 +609,7 @@
 </section>
 
 <!-- WHY -->
-<section id="why">
+<section id="why" class="band">
   <div class="wrap">
     <div class="kicker">Why Aafina</div>
     <h2>Building for a changing world.</h2>
@@ -742,6 +774,11 @@
     b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
     m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false')}});
     document.getElementById('yr').textContent=new Date().getFullYear();
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=document.querySelector(id);if(!t)return;e.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth'});history.replaceState(null,'',id)})});
+    if('IntersectionObserver' in window){var links={};document.querySelectorAll('nav a[href^="#"]').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+      var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting&&links[en.target.id]){Object.values(links).forEach(function(l){l.classList.remove('active')});links[en.target.id].classList.add('active')}})},{rootMargin:'-45% 0px -50% 0px'});
+      document.querySelectorAll('main section[id]').forEach(function(sec){io.observe(sec)})}
   })();
 </script>
 </body>
