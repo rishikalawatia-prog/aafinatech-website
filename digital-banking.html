@@ -429,6 +429,37 @@
   .offer li{padding:10px 0 10px 26px;position:relative;border-top:1px solid rgba(255,255,255,.1);font-size:15px;color:#fff}
   .offer li:first-child{border-top:none}
   .offer li::before{content:"";position:absolute;left:2px;top:17px;width:9px;height:9px;border-radius:2px;background:var(--orange)}
+  .hero-visual{margin:0;position:relative}
+  .hero-visual img{width:100%;height:auto;display:block;border-radius:16px;border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 60px rgba(0,0,0,.35)}
+  .offer-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .offer-chips span{font-size:13px;color:#fff;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:6px 12px}
+  .omni{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;margin-top:40px;text-align:left}
+  .omni img{width:100%;height:auto;border-radius:16px;display:block}
+  .omni h3{font-family:var(--serif);font-weight:400;font-size:32px;color:var(--navy);line-height:1.2}
+  .omni p{margin-top:14px;color:var(--muted);text-align:left!important;text-align-last:left!important}
+  .ticks{list-style:none;margin-top:18px}
+  .ticks li{padding:10px 0 10px 30px;position:relative;border-top:1px solid var(--line);color:var(--ink)}
+  .ticks li:first-child{border-top:none}
+  .ticks li::before{content:"";position:absolute;left:0;top:13px;width:18px;height:18px;border-radius:50%;background:var(--blue-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E8792B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/12px no-repeat}
+  .card-range{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  .rc{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+  .rc img{width:100%;aspect-ratio:800/721;object-fit:cover;display:block}
+  .rc div{padding:20px 22px 24px;text-align:center}
+  .rc h3{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--navy)}
+  .rc p{color:var(--muted);font-size:15px;margin-top:8px;text-align:center!important;text-align-last:center!important}
+  .range-note{text-align:center!important;text-align-last:center!important;margin-top:18px;font-size:13.5px;color:var(--muted)}
+  .seg{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+  .seg label{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:14.5px;border:1px solid #CBD4E1;border-radius:8px;padding:10px 16px;cursor:pointer;min-height:44px}
+  .seg input{accent-color:var(--orange);width:16px;height:16px}
+  .seg label:has(input:checked){border-color:var(--orange);background:#FDF1E7}
+  .opt-l{font-weight:400;color:var(--muted)}
+  .hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink);grid-column:1/-1;line-height:1.5}
+  .consent input{width:18px;height:18px;margin-top:2px;accent-color:var(--orange);flex:none}
+  .fld [aria-invalid="true"]{border-color:#C2410C;background:#FFF7F2}
+  .enq-form.is-individual .biz{display:none}
+  .form-foot button[disabled]{opacity:.7;cursor:progress}
+  .form-msg a{color:var(--navy);font-weight:600}
   .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
   .cap{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 24px;text-align:center}
   .cap .ico{width:48px;height:48px;border-radius:12px;background:var(--blue-soft);display:grid;place-items:center;margin:0 auto 14px}
@@ -483,6 +514,8 @@
   .disclaimer b{color:var(--navy)}
   @media (max-width:900px){
     .pg-hero .wrap{grid-template-columns:1fr}
+    .omni,.card-range{grid-template-columns:1fr}
+    .omni{gap:24px}
     section p.price-note, section .cap p, section .flow p, section .opt p{text-align:center!important;text-align-last:center!important}
     .cap-grid,.flow,.opts{grid-template-columns:1fr}
     .who-grid{grid-template-columns:1fr 1fr}
@@ -534,20 +567,16 @@
       <h1>Launch your own digital bank, powered by Biptap.</h1>
       <p class="lead">Through our partnership with Biptap, the world’s first omnibank, Aafina helps businesses, communities and networks launch their own branded banking platforms: cards, accounts, crypto wallets and global payouts, all under your own brand.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="#consult">Book a consultation with Aafina</a>
+        <a class="btn btn-primary" href="#consult">Get started with Aafina</a>
         <a class="btn btn-ghost" href="#options">See launch options</a>
       </div>
     </div>
-    <div class="offer" aria-label="What you can offer your customers">
-      <h3>What you can offer, under your brand</h3>
-      <ul>
-        <li>Virtual and physical cards</li>
-        <li>Multi-currency accounts</li>
-        <li>Offshore accounts for eligible international clients</li>
-        <li>Crypto wallets</li>
-        <li>Global payouts</li>
-      </ul>
-    </div>
+    <figure class="hero-visual">
+      <img src="images/partners/biptap/cards-trio.jpg" alt="Biptap metal, plastic and virtual cards" width="1100" height="992">
+      <figcaption class="offer-chips" aria-label="What you can offer, under your brand">
+        <span>Virtual &amp; physical cards</span><span>Multi-currency accounts</span><span>Crypto wallets</span><span>Global payouts</span><span>Offshore accounts*</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
@@ -556,7 +585,19 @@
   <div class="wrap">
     <div class="kicker">The Platform</div>
     <h2>Everything your customers expect from a modern bank.</h2>
-    <p class="intro">Biptap is an omnibanking infrastructure that unifies traditional banking, crypto-to-card spending and multi-currency offshore accounts, offered as a white-label platform that brands license to launch their own banking products. Aafina helps you shape it into a product that fits your business and your customers.</p>
+    <div class="omni">
+      <img src="images/partners/biptap/omnibank-app.jpg" alt="Biptap app with cards, crypto assets and an offshore account" width="929" height="1000" loading="lazy">
+      <div>
+        <h3>The world’s first omnibank</h3>
+        <p>Traditional banking, crypto-to-card spending and multi-currency offshore accounts in one platform, available as a white-label product that brands license to launch their own banking.</p>
+        <ul class="ticks">
+          <li>One app for fiat, crypto and cards</li>
+          <li>Spend crypto balances with a card</li>
+          <li>Hold and move money across currencies</li>
+          <li>Launch it all under your own brand</li>
+        </ul>
+      </div>
+    </div>
     <div class="cap-grid">
       <article class="cap"><div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B1B33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19M6.5 15h4"/></svg></div><h3>Virtual &amp; physical cards</h3><p>Issue branded cards your customers can use online and in stores.</p></article>
       <article class="cap"><div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B1B33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Multi-currency &amp; offshore accounts</h3><p>Accounts that let customers hold and move money across currencies.</p><small>Offshore accounts are presented for eligible international clients and businesses.</small></article>
@@ -568,8 +609,22 @@
   </div>
 </section>
 
+<!-- CARDS -->
+<section id="cards" class="alt">
+  <div class="wrap">
+    <div class="kicker">The Card Range</div>
+    <h2>Premium cards, physical and virtual.</h2>
+    <div class="card-range">
+      <article class="rc"><img src="images/partners/biptap/card-metal.jpg" alt="Biptap black metal card" width="800" height="721" loading="lazy"><div><h3>Black Metal Card</h3><p>The premium physical card in matte black, with an embossed logomark and chip, built for presence and durability.</p></div></article>
+      <article class="rc"><img src="images/partners/biptap/card-pro.jpg" alt="Biptap PRO plastic card" width="800" height="721" loading="lazy"><div><h3>PRO Plastic Card</h3><p>A matte black physical card with a streamlined, debossed design for PRO account holders.</p></div></article>
+      <article class="rc"><img src="images/partners/biptap/card-virtual.jpg" alt="Biptap virtual card in the mobile app" width="800" height="721" loading="lazy"><div><h3>Virtual Card</h3><p>A soft holographic design, ready instantly in the app and in digital wallets.</p></div></article>
+    </div>
+    <p class="range-note">Card designs shown are Biptap’s. White-label programmes can carry your own brand.</p>
+  </div>
+</section>
+
 <!-- WHO -->
-<section id="who" class="alt">
+<section id="who">
   <div class="wrap">
     <div class="kicker">Who It’s For</div>
     <h2>Built for businesses that move money for others.</h2>
@@ -584,7 +639,7 @@
 </section>
 
 <!-- HOW AAFINA HELPS -->
-<section id="how">
+<section id="how" class="alt">
   <div class="wrap">
     <div class="kicker">How Aafina Helps</div>
     <h2>From first call to launch.</h2>
@@ -597,7 +652,7 @@
 </section>
 
 <!-- OPTIONS -->
-<section id="options" class="alt">
+<section id="options">
   <div class="wrap">
     <div class="kicker">Launch Options</div>
     <h2>Three ways to launch.</h2>
@@ -617,20 +672,26 @@
     <h2>Talk to Aafina about your digital bank.</h2>
     <div class="consult-grid">
       <div class="consult-aside">
-        <p>Tell us a little about your business. Aafina will review your needs and come back to you to arrange a consultation.</p>
+        <p>Share a few details. Aafina is notified straight away, and you then continue to Biptap to start your application, with Aafina as your partner.</p>
         <ul>
-          <li>Review of your business model</li>
+          <li>Aafina reviews your enquiry and follows up</li>
           <li>Recommended package and launch option</li>
           <li>Guided onboarding with Biptap</li>
         </ul>
       </div>
-      <form class="enq-form" id="enqForm" novalidate>
+      <form class="enq-form" id="enqForm" action="enquiry.php" method="post" novalidate>
+        <fieldset class="fld full"><legend>I am enquiring as</legend>
+          <div class="seg">
+            <label><input type="radio" name="as" value="Business" checked> A business</label>
+            <label><input type="radio" name="as" value="Individual"> An individual</label>
+          </div></fieldset>
         <div class="fld"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required></div>
-        <div class="fld"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization" required></div>
-        <div class="fld"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-        <div class="fld"><label for="f-country">Country</label><input id="f-country" name="country" autocomplete="country-name" required></div>
-        <div class="fld full"><label for="f-type">Type of business</label>
-          <select id="f-type" name="type" required>
+        <div class="fld biz"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div>
+        <div class="fld"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="fld"><label for="f-phone">Phone / WhatsApp <span class="opt-l">(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="fld"><label for="f-country">Country of residence</label><input id="f-country" name="country" autocomplete="country-name" required></div>
+        <div class="fld biz"><label for="f-type">Type of business</label>
+          <select id="f-type" name="type">
             <option value="">Select one</option>
             <option>Fintech</option><option>Payments / remittance</option><option>Network marketing / affiliate</option>
             <option>Community / creator</option><option>Enterprise</option><option>Other</option>
@@ -642,13 +703,16 @@
             <label><input type="checkbox" name="interest" value="Crypto wallets">Crypto wallets</label>
             <label><input type="checkbox" name="interest" value="Global payouts">Global payouts</label>
           </div></fieldset>
-        <div class="fld full"><label for="f-opt">Preferred launch option</label>
+        <div class="fld full biz"><label for="f-opt">Preferred launch option</label>
           <select id="f-opt" name="option"><option>Not sure yet</option><option>API</option><option>Branded template</option><option>Custom build</option></select></div>
-        <div class="fld full"><label for="f-msg">Anything else we should know?</label><textarea id="f-msg" name="message"></textarea></div>
-        <p class="form-msg" id="formMsg" role="status"></p>
+        <div class="fld full"><label for="f-msg">Anything else we should know? <span class="opt-l">(optional)</span></label><textarea id="f-msg" name="message"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="f-web">Website</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
+        <input type="hidden" name="started" id="f-started"><input type="hidden" name="interests" id="f-interests"><input type="hidden" name="page" id="f-page">
+        <label class="consent full"><input type="checkbox" name="consent" value="yes" id="f-consent" required> I agree that Aafina Technologies may contact me about this enquiry.</label>
+        <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
         <div class="form-foot">
-          <small>Submitting opens your email app with your details addressed to Aafina. Nothing is sent until you press send there.</small>
-          <button type="submit">Book a consultation with Aafina</button>
+          <small>After you submit, we’ll take you to Biptap’s sign-up page through Aafina’s partner link.</small>
+          <button type="submit" id="f-submit">Submit &amp; continue to Biptap</button>
         </div>
       </form>
     </div>
@@ -660,9 +724,9 @@
   <div class="wrap indiv">
     <div class="kicker">For Individuals</div>
     <h2>Looking for a personal card or account?</h2>
-    <p class="intro">Availability depends on your country of residence and eligibility. Contact us and we’ll point you to the right sign-up route.</p>
+    <p class="intro">Fill in the short form and continue to Biptap through Aafina’s partner link. Availability depends on your country of residence and eligibility.</p>
     <!-- TODO: replace this mailto with Aafina's Biptap referral link once the partner dashboard is set up -->
-    <a href="mailto:admin@skilligen.com?subject=Personal%20card%20or%20account%20enquiry">Ask about a personal account →</a>
+    <a href="#consult" data-as="Individual">Get a personal card or account →</a>
   </div>
 </section>
 
@@ -670,7 +734,7 @@
 
 <div class="disclaimer" role="note">
   <div class="wrap">
-    <p><b>Important:</b> Aafina Technologies is a technology and business development partner of Biptap. Aafina is not a bank. Banking and card services are provided by Biptap and its licensed banking partners, subject to eligibility, KYC and local regulations. Services may not be available in all countries. Offshore accounts are offered only to eligible international clients and businesses.</p>
+    <p><b>Important:</b> Aafina Technologies is a technology and business development partner of Biptap. Aafina is not a bank. Banking and card services are provided by Biptap and its licensed banking partners, subject to eligibility, KYC and local regulations. Services may not be available in all countries. *Offshore accounts are offered only to eligible international clients and businesses. Card and app images are Biptap’s and shown for illustration.</p>
   </div>
 </div>
 
@@ -747,18 +811,40 @@
 
 <script>
   (function(){
-    var f=document.getElementById('enqForm'), m=document.getElementById('formMsg');
+    var REFERRAL='https://buildabank.io/?ref=UQ9TgyEBAvPP';
+    var f=document.getElementById('enqForm'), m=document.getElementById('formMsg'), btn=document.getElementById('f-submit');
+    document.getElementById('f-started').value=Date.now();
+    document.getElementById('f-page').value=location.href;
+    function setAs(v){f.querySelectorAll('input[name=as]').forEach(function(r){r.checked=(r.value===v)});f.classList.toggle('is-individual',v==='Individual')}
+    f.querySelectorAll('input[name=as]').forEach(function(r){r.addEventListener('change',function(){setAs(r.value)})});
+    document.querySelectorAll('a[data-as]').forEach(function(a){a.addEventListener('click',function(){setAs(a.getAttribute('data-as'))})});
+    function say(html){m.style.display='block';m.innerHTML=html}
+    function val(id){return document.getElementById(id).value.trim()}
     f.addEventListener('submit',function(e){
       e.preventDefault();
-      var req=['f-name','f-company','f-email','f-country','f-type'], bad=null;
+      var indiv=f.classList.contains('is-individual');
+      var req=['f-name','f-email','f-country'].concat(indiv?[]:['f-company']), bad=null;
       req.forEach(function(id){var el=document.getElementById(id);var ok=el.value.trim()&&(el.type!=='email'||/.+@.+\..+/.test(el.value));el.setAttribute('aria-invalid',ok?'false':'true');if(!ok&&!bad)bad=el});
-      if(bad){m.style.display='block';m.textContent='Please complete the highlighted fields.';bad.focus();return}
-      var v=function(id){return document.getElementById(id).value.trim()};
-      var ints=[].slice.call(f.querySelectorAll('input[name=interest]:checked')).map(function(c){return c.value}).join(', ')||'Not specified';
-      var body='Name: '+v('f-name')+'\nCompany: '+v('f-company')+'\nEmail: '+v('f-email')+'\nCountry: '+v('f-country')+'\nBusiness type: '+v('f-type')+'\nInterested in: '+ints+'\nLaunch option: '+v('f-opt')+'\n\nMessage:\n'+v('f-msg');
-      var subj='Digital banking consultation – '+v('f-company');
-      window.location.href='mailto:admin@skilligen.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
-      m.style.display='block';m.textContent='Your email app should open with your details. If it doesn’t, email us at admin@skilligen.com.';
+      var c=document.getElementById('f-consent'); c.setAttribute('aria-invalid',c.checked?'false':'true'); if(!c.checked&&!bad)bad=c;
+      if(bad){say('Please complete the highlighted fields.');bad.focus();return}
+      document.getElementById('f-interests').value=[].slice.call(f.querySelectorAll('input[name=interest]:checked')).map(function(x){return x.value}).join(', ');
+      btn.disabled=true; btn.textContent='Sending…';
+      fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+        .then(function(r){return r.json().then(function(d){return {ok:r.ok&&d.ok,d:d}})})
+        .then(function(res){
+          if(res.ok){
+            var url=res.d.redirect||REFERRAL;
+            say('Thank you. Aafina has received your enquiry. Taking you to Biptap now… <a href="'+url+'">Continue</a>');
+            setTimeout(function(){location.href=url},2200);
+          } else { throw new Error((res.d&&res.d.error)||'failed') }
+        })
+        .catch(function(){
+          btn.disabled=false; btn.textContent='Submit & continue to Biptap';
+          var who=indiv?val('f-name'):val('f-company');
+          var body='Enquiring as: '+(indiv?'Individual':'Business')+'\nName: '+val('f-name')+'\nCompany: '+val('f-company')+'\nEmail: '+val('f-email')+'\nPhone: '+val('f-phone')+'\nCountry: '+val('f-country')+'\nInterested in: '+document.getElementById('f-interests').value+'\n\n'+val('f-msg');
+          var mail='mailto:admin@skilligen.com?subject='+encodeURIComponent('Biptap enquiry – '+who)+'&body='+encodeURIComponent(body);
+          say('We couldn’t send your details automatically. Please <a href="'+mail+'">email them to Aafina</a>, then <a href="'+REFERRAL+'" target="_blank" rel="noopener">continue to Biptap</a>.');
+        });
     });
   })();
 </script>
